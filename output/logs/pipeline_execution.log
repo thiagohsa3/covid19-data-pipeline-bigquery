@@ -1,0 +1,220 @@
+2026-07-31 14:11:57,769 | [INFO] | ============================================================
+2026-07-31 14:11:57,770 | [INFO] | INICIANDO EXECUTOR DO PIPELINE COVID-19 (BIGQUERY)
+2026-07-31 14:11:57,770 | [INFO] | ============================================================
+2026-07-31 14:11:57,770 | [INFO] | Conectando ao Google BigQuery (Project ID: project-95f87894-d8fa-4e49-828)...
+2026-07-31 14:12:01,257 | [INFO] | ✅ Conexão estabelecida com sucesso!
+2026-07-31 14:12:01,259 | [INFO] | Executando Query: Top 20 Países por Casos Confirmados...
+2026-07-31 14:12:05,335 | [INFO] | === METADADOS DA BASE AGG (TOP 20 PAÍSES) ===
+2026-07-31 14:12:05,336 | [INFO] | Total de Linhas Extradas: 20
+2026-07-31 14:12:05,341 | [INFO] | Tipos de Colunas:
+country_region       str
+total_confirmed    int64
+total_deaths       int64
+2026-07-31 14:12:05,343 | [INFO] | Quantidade de Nulos por Coluna:
+country_region     0
+total_confirmed    0
+total_deaths       0
+2026-07-31 14:12:05,344 | [INFO] | --- Executando Testes de Qualidade (Ranking Top 20) ---
+2026-07-31 14:12:05,344 | [INFO] | ✅ [PASS] O ranking contém exatamente 20 países.
+2026-07-31 14:12:05,346 | [INFO] | ✅ [PASS] Não existem casos confirmados negativos.
+2026-07-31 14:12:05,346 | [INFO] | ✅ [PASS] Não existem óbitos negativos.
+2026-07-31 14:12:05,354 | [INFO] | ✅ [PASS] Não há países duplicados no ranking.
+2026-07-31 14:12:05,354 | [INFO] | Executando Query: Série Temporal para Brazil...
+2026-07-31 14:12:07,846 | [INFO] | === METADADOS DA BASE TEMPORAL (Brazil) ===
+2026-07-31 14:12:07,847 | [INFO] | Total de Registros Diários: 350
+2026-07-31 14:12:07,847 | [INFO] | Tipos de Colunas:
+date              datetime64[s]
+country_region              str
+confirmed                 int64
+2026-07-31 14:12:07,848 | [INFO] | Quantidade de Nulos por Coluna:
+date              0
+country_region    0
+confirmed         0
+2026-07-31 14:12:07,848 | [INFO] | --- Executando Testes de Qualidade (Série Temporal Brazil) ---
+2026-07-31 14:12:07,849 | [INFO] | ✅ [PASS] Não existem casos diários negativos.
+2026-07-31 14:12:07,851 | [INFO] | ✅ [PASS] As datas estão perfeitamente ordenadas do início ao fim do período.
+2026-07-31 14:12:07,851 | [INFO] | ✅ [PASS] Não existem datas duplicadas na série temporal.
+2026-07-31 14:12:07,852 | [INFO] | Gerando gráfico de linha da série temporal...
+2026-07-31 14:12:08,642 | [INFO] | ✅ Gráfico salvo com sucesso em: c:\Users\THIAGO\Documents\curso_big_query\output\images\grafico_covid_brasil.png
+2026-07-31 14:12:08,740 | [INFO] | ✅ CSV exportado em: c:\Users\THIAGO\Documents\curso_big_query\output\csv\covid_agg_top20.csv
+2026-07-31 14:12:08,740 | [INFO] | ✅ Parquet exportado em: c:\Users\THIAGO\Documents\curso_big_query\output\parquet\covid_timeseries_brazil.parquet
+2026-07-31 14:12:08,740 | [INFO] | ✅ Logs completos gravados em: c:\Users\THIAGO\Documents\curso_big_query\output\logs\pipeline_execution.log
+2026-07-31 14:12:08,741 | [INFO] | ============================================================
+2026-07-31 14:12:08,741 | [INFO] | 🚀 PIPELINE EXECUTADO E AUDITADO COM SUCESSO COMPLETO!
+2026-07-31 14:12:08,741 | [INFO] | ============================================================
+2026-07-31 14:13:24,542 | [INFO] | ============================================================
+2026-07-31 14:13:24,544 | [INFO] | INICIANDO EXECUTOR DO PIPELINE COVID-19 (BIGQUERY)
+2026-07-31 14:13:24,544 | [INFO] | ============================================================
+2026-07-31 14:13:24,544 | [INFO] | Conectando ao Google BigQuery (Project ID: project-95f87894-d8fa-4e49-828)...
+2026-07-31 14:13:25,975 | [INFO] | ✅ Conexão estabelecida com sucesso!
+2026-07-31 14:13:25,976 | [INFO] | Executando Query: Top 20 Países por Casos Confirmados...
+2026-07-31 14:13:29,733 | [INFO] | === METADADOS DA BASE AGG (TOP 20 PAÍSES) ===
+2026-07-31 14:13:29,733 | [INFO] | Total de Linhas Extradas: 20
+2026-07-31 14:13:29,737 | [INFO] | Tipos de Colunas:
+country_region       str
+total_confirmed    int64
+total_deaths       int64
+2026-07-31 14:13:29,740 | [INFO] | Quantidade de Nulos por Coluna:
+country_region     0
+total_confirmed    0
+total_deaths       0
+2026-07-31 14:13:29,741 | [INFO] | --- Executando Testes de Qualidade (Ranking Top 20) ---
+2026-07-31 14:13:29,741 | [INFO] | ✅ [PASS] O ranking contém exatamente 20 países.
+2026-07-31 14:13:29,742 | [INFO] | ✅ [PASS] Não existem casos confirmados negativos.
+2026-07-31 14:13:29,743 | [INFO] | ✅ [PASS] Não existem óbitos negativos.
+2026-07-31 14:13:29,749 | [INFO] | ✅ [PASS] Não há países duplicados no ranking.
+2026-07-31 14:13:29,749 | [INFO] | Executando Query: Série Temporal para Brazil...
+2026-07-31 14:13:32,209 | [INFO] | === METADADOS DA BASE TEMPORAL (Brazil) ===
+2026-07-31 14:13:32,209 | [INFO] | Total de Registros Diários: 350
+2026-07-31 14:13:32,210 | [INFO] | Tipos de Colunas:
+date              datetime64[s]
+country_region              str
+confirmed                 int64
+2026-07-31 14:13:32,212 | [INFO] | Quantidade de Nulos por Coluna:
+date              0
+country_region    0
+confirmed         0
+2026-07-31 14:13:32,212 | [INFO] | --- Executando Testes de Qualidade (Série Temporal Brazil) ---
+2026-07-31 14:13:32,213 | [INFO] | ✅ [PASS] Não existem casos diários negativos.
+2026-07-31 14:13:32,215 | [INFO] | ✅ [PASS] As datas estão perfeitamente ordenadas do início ao fim do período.
+2026-07-31 14:13:32,216 | [INFO] | ✅ [PASS] Não existem datas duplicadas na série temporal.
+2026-07-31 14:13:32,217 | [INFO] | Gerando gráfico de linha da série temporal...
+2026-07-31 14:13:32,896 | [INFO] | ✅ Gráfico salvo com sucesso em: c:\Users\THIAGO\Documents\curso_big_query\output\images\grafico_covid_brasil.png
+2026-07-31 14:13:33,020 | [INFO] | ✅ CSV exportado em: c:\Users\THIAGO\Documents\curso_big_query\output\csv\covid_agg_top20.csv
+2026-07-31 14:13:33,021 | [INFO] | ✅ Parquet exportado em: c:\Users\THIAGO\Documents\curso_big_query\output\parquet\covid_timeseries_brazil.parquet
+2026-07-31 14:13:33,021 | [INFO] | ✅ Logs completos gravados em: c:\Users\THIAGO\Documents\curso_big_query\output\logs\pipeline_execution.log
+2026-07-31 14:13:33,021 | [INFO] | ============================================================
+2026-07-31 14:13:33,021 | [INFO] | 🚀 PIPELINE EXECUTADO E AUDITADO COM SUCESSO COMPLETO!
+2026-07-31 14:13:33,022 | [INFO] | ============================================================
+2026-07-31 14:13:36,408 | [INFO] | ============================================================
+2026-07-31 14:13:36,409 | [INFO] | INICIANDO EXECUTOR DO PIPELINE COVID-19 (BIGQUERY)
+2026-07-31 14:13:36,410 | [INFO] | ============================================================
+2026-07-31 14:13:36,410 | [INFO] | Conectando ao Google BigQuery (Project ID: project-95f87894-d8fa-4e49-828)...
+2026-07-31 14:13:38,714 | [INFO] | ✅ Conexão estabelecida com sucesso!
+2026-07-31 14:13:38,714 | [INFO] | Executando Query: Top 20 Países por Casos Confirmados...
+2026-07-31 14:13:41,945 | [INFO] | === METADADOS DA BASE AGG (TOP 20 PAÍSES) ===
+2026-07-31 14:13:41,946 | [INFO] | Total de Linhas Extradas: 20
+2026-07-31 14:13:41,949 | [INFO] | Tipos de Colunas:
+country_region       str
+total_confirmed    int64
+total_deaths       int64
+2026-07-31 14:13:41,952 | [INFO] | Quantidade de Nulos por Coluna:
+country_region     0
+total_confirmed    0
+total_deaths       0
+2026-07-31 14:13:41,952 | [INFO] | --- Executando Testes de Qualidade (Ranking Top 20) ---
+2026-07-31 14:13:41,953 | [INFO] | ✅ [PASS] O ranking contém exatamente 20 países.
+2026-07-31 14:13:41,954 | [INFO] | ✅ [PASS] Não existem casos confirmados negativos.
+2026-07-31 14:13:41,955 | [INFO] | ✅ [PASS] Não existem óbitos negativos.
+2026-07-31 14:13:41,962 | [INFO] | ✅ [PASS] Não há países duplicados no ranking.
+2026-07-31 14:13:41,963 | [INFO] | Executando Query: Série Temporal para Brazil...
+2026-07-31 14:13:44,628 | [INFO] | === METADADOS DA BASE TEMPORAL (Brazil) ===
+2026-07-31 14:13:44,629 | [INFO] | Total de Registros Diários: 350
+2026-07-31 14:13:44,630 | [INFO] | Tipos de Colunas:
+date              datetime64[s]
+country_region              str
+confirmed                 int64
+2026-07-31 14:13:44,631 | [INFO] | Quantidade de Nulos por Coluna:
+date              0
+country_region    0
+confirmed         0
+2026-07-31 14:13:44,632 | [INFO] | --- Executando Testes de Qualidade (Série Temporal Brazil) ---
+2026-07-31 14:13:44,632 | [INFO] | ✅ [PASS] Não existem casos diários negativos.
+2026-07-31 14:13:44,635 | [INFO] | ✅ [PASS] As datas estão perfeitamente ordenadas do início ao fim do período.
+2026-07-31 14:13:44,635 | [INFO] | ✅ [PASS] Não existem datas duplicadas na série temporal.
+2026-07-31 14:13:44,636 | [INFO] | Gerando gráfico de linha da série temporal...
+2026-07-31 14:13:46,055 | [INFO] | ✅ Gráfico salvo com sucesso em: c:\Users\THIAGO\Documents\curso_big_query\output\images\grafico_covid_brasil.png
+2026-07-31 14:13:46,387 | [INFO] | ✅ CSV exportado em: c:\Users\THIAGO\Documents\curso_big_query\output\csv\covid_agg_top20.csv
+2026-07-31 14:13:46,387 | [INFO] | ✅ Parquet exportado em: c:\Users\THIAGO\Documents\curso_big_query\output\parquet\covid_timeseries_brazil.parquet
+2026-07-31 14:13:46,388 | [INFO] | ✅ Logs completos gravados em: c:\Users\THIAGO\Documents\curso_big_query\output\logs\pipeline_execution.log
+2026-07-31 14:13:46,388 | [INFO] | ============================================================
+2026-07-31 14:13:46,388 | [INFO] | 🚀 PIPELINE EXECUTADO E AUDITADO COM SUCESSO COMPLETO!
+2026-07-31 14:13:46,388 | [INFO] | ============================================================
+2026-07-31 14:22:47,114 | [INFO] | ============================================================
+2026-07-31 14:22:47,115 | [INFO] | INICIANDO EXECUTOR DO PIPELINE COVID-19 (BIGQUERY)
+2026-07-31 14:22:47,116 | [INFO] | ============================================================
+2026-07-31 14:22:47,116 | [INFO] | Conectando ao Google BigQuery (Project ID: project-95f87894-d8fa-4e49-828)...
+2026-07-31 14:22:48,442 | [INFO] | ✅ Conexão estabelecida com sucesso!
+2026-07-31 14:22:48,442 | [INFO] | Executando Query: Top 20 Países por Casos Confirmados...
+2026-07-31 14:22:52,645 | [INFO] | === METADADOS DA BASE AGG (TOP 20 PAÍSES) ===
+2026-07-31 14:22:52,645 | [INFO] | Total de Linhas Extradas: 20
+2026-07-31 14:22:52,648 | [INFO] | Tipos de Colunas:
+country_region       str
+total_confirmed    int64
+total_deaths       int64
+2026-07-31 14:22:52,651 | [INFO] | Quantidade de Nulos por Coluna:
+country_region     0
+total_confirmed    0
+total_deaths       0
+2026-07-31 14:22:52,651 | [INFO] | --- Executando Testes de Qualidade (Ranking Top 20) ---
+2026-07-31 14:22:52,651 | [INFO] | ✅ [PASS] O ranking contém exatamente 20 países.
+2026-07-31 14:22:52,652 | [INFO] | ✅ [PASS] Não existem casos confirmados negativos.
+2026-07-31 14:22:52,653 | [INFO] | ✅ [PASS] Não existem óbitos negativos.
+2026-07-31 14:22:52,659 | [INFO] | ✅ [PASS] Não há países duplicados no ranking.
+2026-07-31 14:22:52,659 | [INFO] | Executando Query: Série Temporal para Brazil...
+2026-07-31 14:22:55,563 | [INFO] | === METADADOS DA BASE TEMPORAL (Brazil) ===
+2026-07-31 14:22:55,563 | [INFO] | Total de Registros Diários: 350
+2026-07-31 14:22:55,564 | [INFO] | Tipos de Colunas:
+date              datetime64[s]
+country_region              str
+confirmed                 int64
+2026-07-31 14:22:55,565 | [INFO] | Quantidade de Nulos por Coluna:
+date              0
+country_region    0
+confirmed         0
+2026-07-31 14:22:55,566 | [INFO] | --- Executando Testes de Qualidade (Série Temporal Brazil) ---
+2026-07-31 14:22:55,566 | [INFO] | ✅ [PASS] Não existem casos diários negativos.
+2026-07-31 14:22:55,568 | [INFO] | ✅ [PASS] As datas estão perfeitamente ordenadas do início ao fim do período.
+2026-07-31 14:22:55,569 | [INFO] | ✅ [PASS] Não existem datas duplicadas na série temporal.
+2026-07-31 14:22:55,569 | [INFO] | Gerando gráfico de linha da série temporal...
+2026-07-31 14:22:56,243 | [INFO] | ✅ Gráfico salvo com sucesso em: c:\Users\THIAGO\Documents\curso_big_query\output\images\grafico_covid_brasil.png
+2026-07-31 14:22:56,338 | [INFO] | ✅ CSV exportado em: c:\Users\THIAGO\Documents\curso_big_query\output\csv\covid_agg_top20.csv
+2026-07-31 14:22:56,339 | [INFO] | ✅ Parquet exportado em: c:\Users\THIAGO\Documents\curso_big_query\output\parquet\covid_timeseries_brazil.parquet
+2026-07-31 14:22:56,339 | [INFO] | ✅ Logs completos gravados em: c:\Users\THIAGO\Documents\curso_big_query\output\logs\pipeline_execution.log
+2026-07-31 14:22:56,339 | [INFO] | ============================================================
+2026-07-31 14:22:56,339 | [INFO] | 🚀 PIPELINE EXECUTADO E AUDITADO COM SUCESSO COMPLETO!
+2026-07-31 14:22:56,340 | [INFO] | ============================================================
+2026-07-31 14:24:26,484 | [INFO] | ============================================================
+2026-07-31 14:24:26,484 | [INFO] | INICIANDO EXECUTOR DO PIPELINE COVID-19 (BIGQUERY)
+2026-07-31 14:24:26,484 | [INFO] | ============================================================
+2026-07-31 14:24:26,484 | [INFO] | Conectando ao Google BigQuery (Project ID: project-95f87894-d8fa-4e49-828)...
+2026-07-31 14:24:27,706 | [INFO] | ✅ Conexão estabelecida com sucesso!
+2026-07-31 14:24:27,706 | [INFO] | Executando Query: Top 20 Países por Casos Confirmados...
+2026-07-31 14:24:31,423 | [INFO] | === METADADOS DA BASE AGG (TOP 20 PAÍSES) ===
+2026-07-31 14:24:31,423 | [INFO] | Total de Linhas Extradas: 20
+2026-07-31 14:24:31,425 | [INFO] | Tipos de Colunas:
+country_region       str
+total_confirmed    int64
+total_deaths       int64
+2026-07-31 14:24:31,426 | [INFO] | Quantidade de Nulos por Coluna:
+country_region     0
+total_confirmed    0
+total_deaths       0
+2026-07-31 14:24:31,427 | [INFO] | --- Executando Testes de Qualidade (Ranking Top 20) ---
+2026-07-31 14:24:31,427 | [INFO] | ✅ [PASS] O ranking contém exatamente 20 países.
+2026-07-31 14:24:31,427 | [INFO] | ✅ [PASS] Não existem casos confirmados negativos.
+2026-07-31 14:24:31,428 | [INFO] | ✅ [PASS] Não existem óbitos negativos.
+2026-07-31 14:24:31,429 | [INFO] | ✅ [PASS] Não há países duplicados no ranking.
+2026-07-31 14:24:31,429 | [INFO] | Executando Query: Série Temporal para Brazil...
+2026-07-31 14:24:33,995 | [INFO] | === METADADOS DA BASE TEMPORAL (Brazil) ===
+2026-07-31 14:24:33,996 | [INFO] | Total de Registros Diários: 350
+2026-07-31 14:24:33,997 | [INFO] | Tipos de Colunas:
+date              datetime64[s]
+country_region              str
+confirmed                 int64
+2026-07-31 14:24:33,998 | [INFO] | Quantidade de Nulos por Coluna:
+date              0
+country_region    0
+confirmed         0
+2026-07-31 14:24:33,999 | [INFO] | --- Executando Testes de Qualidade (Série Temporal Brazil) ---
+2026-07-31 14:24:33,999 | [INFO] | ✅ [PASS] Não existem casos diários negativos.
+2026-07-31 14:24:33,999 | [INFO] | ✅ [PASS] As datas estão perfeitamente ordenadas do início ao fim do período.
+2026-07-31 14:24:34,000 | [INFO] | ✅ [PASS] Não existem datas duplicadas na série temporal.
+2026-07-31 14:24:34,000 | [INFO] | Gerando gráfico de linha da série temporal...
+2026-07-31 14:24:34,555 | [INFO] | ✅ Gráfico salvo com sucesso em: c:\Users\THIAGO\Documents\curso_big_query\output\images\grafico_covid_brasil.png
+2026-07-31 14:24:34,596 | [INFO] | ✅ CSV exportado em: c:\Users\THIAGO\Documents\curso_big_query\output\csv\covid_agg_top20.csv
+2026-07-31 14:24:34,596 | [INFO] | ✅ Parquet exportado em: c:\Users\THIAGO\Documents\curso_big_query\output\parquet\covid_timeseries_brazil.parquet
+2026-07-31 14:24:34,597 | [INFO] | ✅ Logs completos gravados em: c:\Users\THIAGO\Documents\curso_big_query\output\logs\pipeline_execution.log
+2026-07-31 14:24:34,597 | [INFO] | ============================================================
+2026-07-31 14:24:34,597 | [INFO] | 🚀 PIPELINE EXECUTADO E AUDITADO COM SUCESSO COMPLETO!
+2026-07-31 14:24:34,597 | [INFO] | ============================================================
